@@ -34,14 +34,20 @@ def test_visual_search_endpoint_basic():
         assert "product_id" in result
         assert "name" in result
 
-        # Verify that the product_id is valid
-        assert result["product_id"] in PRODUCT_IDS
-
         # Verify that the id is a valid index into the product_ids list
         assert 0 <= result["id"] < len(PRODUCT_IDS)
 
-        # Verify that the product_id matches the id's lookup in PRODUCT_IDS
-        assert PRODUCT_IDS[result["id"]] == result["product_id"]
+        # Get the full product ID string from the index
+        full_product_id = PRODUCT_IDS[result["id"]]
+
+        # Verify that the product_id is the numeric part of the full product ID
+        import re
+        match = re.match(r'(\d+)_(.+)', full_product_id)
+        if match:
+            expected_id = match.group(1)
+            expected_name = match.group(2)
+            assert result["product_id"] == expected_id
+            assert result["name"] == expected_name
 
 def test_visual_search_with_custom_top_k():
     """Test the visual search endpoint with a custom top_k parameter."""

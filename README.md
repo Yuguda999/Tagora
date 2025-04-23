@@ -73,13 +73,13 @@ The API will be available at http://localhost:8000.
   "results": [
     {
       "id": 2,
-      "product_id": "5_person",
-      "name": "5_person"
+      "product_id": "5",
+      "name": "person"
     },
     {
       "id": 0,
-      "product_id": "4_human",
-      "name": "4_human"
+      "product_id": "4",
+      "name": "human"
     }
   ],
   "scores": [0.0, 1.0344889163970947]
@@ -158,7 +158,8 @@ tagora/
    - User uploads an image via the API
    - CLIP extracts features from the uploaded image
    - FAISS searches for similar embeddings in the index
-   - The API returns the most similar images with their IDs and similarity scores
+   - The API parses product IDs using regex to separate numeric IDs and descriptive names
+   - The API returns the most similar images with their IDs, names, and similarity scores
 
 ## Contributing
 

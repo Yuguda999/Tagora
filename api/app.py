@@ -1,5 +1,6 @@
 import faiss
 import json
+import re
 from contextlib import asynccontextmanager
 from fastapi import FastAPI, File, UploadFile, HTTPException
 from core.visual_search import get_image_embedding, search_index
@@ -50,11 +51,23 @@ async def visual_search(file: UploadFile = File(...), top_k: int = 5):
 
         for i, idx in enumerate(faiss_ids):
             if 0 <= idx < len(product_ids):
-                product_id = product_ids[idx]
+                product_id_str = product_ids[idx]
+
+                # Use regex to separate the product ID and name
+                # Pattern: <number>_<name>
+                match = re.match(r'(\d+)_(.+)', product_id_str)
+                if match:
+                    real_id = match.group(1)  # The numeric part
+                    name = match.group(2)     # The name part
+                else:
+                    # Fallback if the pattern doesn't match
+                    real_id = product_id_str
+                    name = product_id_str
+
                 mapped_results.append({
                     "id": idx,
-                    "product_id": product_id,
-                    "name": product_id  # Using product_id as name for now
+                    "product_id": real_id,
+                    "name": name
                 })
                 valid_scores.append(scores[i])
 
