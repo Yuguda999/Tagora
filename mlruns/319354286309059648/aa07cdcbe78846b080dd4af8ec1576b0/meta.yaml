@@ -1,0 +1,15 @@
+artifact_uri: file:///home/commanderzer0/Desktop/ml-cartoncart/services/visual_search/mlruns/319354286309059648/aa07cdcbe78846b080dd4af8ec1576b0/artifacts
+end_time: 1744917482137
+entry_point_name: ''
+experiment_id: '319354286309059648'
+lifecycle_stage: active
+run_id: aa07cdcbe78846b080dd4af8ec1576b0
+run_name: angry-rook-840
+run_uuid: aa07cdcbe78846b080dd4af8ec1576b0
+source_name: ''
+source_type: 4
+source_version: ''
+start_time: 1744917482077
+status: 3
+tags: []
+user_id: commanderzer0

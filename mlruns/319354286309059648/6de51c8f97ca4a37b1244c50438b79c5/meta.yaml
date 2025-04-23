@@ -1,0 +1,15 @@
+artifact_uri: file:///home/commanderzer0/Desktop/ml-cartoncart/services/visual_search/mlruns/319354286309059648/6de51c8f97ca4a37b1244c50438b79c5/artifacts
+end_time: 1744924279380
+entry_point_name: ''
+experiment_id: '319354286309059648'
+lifecycle_stage: active
+run_id: 6de51c8f97ca4a37b1244c50438b79c5
+run_name: likeable-snail-20
+run_uuid: 6de51c8f97ca4a37b1244c50438b79c5
+source_name: ''
+source_type: 4
+source_version: ''
+start_time: 1744924279223
+status: 3
+tags: []
+user_id: commanderzer0

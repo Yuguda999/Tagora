@@ -1,0 +1,11 @@
+fastapi
+uvicorn
+transformers
+torch
+faiss-cpu          # or faiss-gpu if you have CUDA
+Pillow
+mlflow
+boto3            # only if you use S3 loader
+requests
+pytest
+python-multipart

@@ -1,0 +1,15 @@
+artifact_uri: file:///home/commanderzer0/Desktop/ml-cartoncart/services/visual_search/mlruns/319354286309059648/cdea797361d943d9a1573ca27e11ec48/artifacts
+end_time: 1744921666246
+entry_point_name: ''
+experiment_id: '319354286309059648'
+lifecycle_stage: active
+run_id: cdea797361d943d9a1573ca27e11ec48
+run_name: receptive-fox-9
+run_uuid: cdea797361d943d9a1573ca27e11ec48
+source_name: ''
+source_type: 4
+source_version: ''
+start_time: 1744921666178
+status: 3
+tags: []
+user_id: commanderzer0
